@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --header-height: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    width: 100%;
+    grid-template-areas: 
+    "aside header"
+    "aside main";
+}
+header{
+    background-color: aqua;
+    grid-area: header;
+}
+aside{
+    background-color: beige;
+    grid-area: aside;
+    height: 100vh;
+}
+main{
+    background-color: blanchedalmond;
+    grid-area: main;
+    height: calc(100vh - var(--header-height));
+}
