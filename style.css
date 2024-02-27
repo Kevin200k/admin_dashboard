@@ -53,11 +53,11 @@ aside{
     /* grid-template-rows: 20px auto auto; */
     gap: 30px;
     align-content: flex-start;
-    padding-left: 6px;
+    padding-left: 10px;
     padding-top: 20px;
 }
 aside img{
-    height: 25px;
+    height: 20px;
 }
 aside li img{
     height: 14px;
@@ -68,10 +68,15 @@ aside li{
     gap: 12px;
 }
 aside a{
-    color:white;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
+    letter-spacing: 0.5px;
+    color: white;
+}
+aside a:hover{
+    color:#d6d3d1;
+
 }
 aside ul{
     display: flex;
