@@ -97,6 +97,10 @@ nav input[type = "search"]:focus{
 #nav_submit_button img{
     height: 18px
 }
+.profile_info{
+    display: flex;
+    
+}
 aside{
     background-color: var(--stone-950, black);
     grid-area: aside;
