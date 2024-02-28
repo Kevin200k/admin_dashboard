@@ -89,7 +89,7 @@ aside a{
     color: white;
 }
 aside a:hover{
-    text-shadow:1.5px 1.5px 50px var(--stone-600);
+    text-shadow:2px 2px 10px;
 
 }
 aside ul{
