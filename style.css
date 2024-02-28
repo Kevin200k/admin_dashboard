@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: var(--font-family);
+    color: var(--stone-600);
 }
 li{
     list-style: none;
@@ -11,7 +12,7 @@ a{
     text-decoration: none;
 }
 :root{
-    /* --header-height: 200px; */
+    --header-height: 105px;
 /* Roboto Font Family */
     --font-family: "Roboto", sans-serif;
     --font-weight-thin: 100;
@@ -43,16 +44,15 @@ a{
     "aside main";
 }
 header{
-    background-color: aqua;
+    /* background-color: var(--stone-50, white); */
     grid-area:header;
     height: var(--header-height);
 }
 nav{
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 5fr 3fr;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--stone-50, white);
     height: 45px;
 }
 nav button{
@@ -99,8 +99,29 @@ nav input[type = "search"]:focus{
 }
 .profile_info{
     display: flex;
-    
+    gap: 13px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
+#bell_icon{
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bell_icon:hover{
+    background-color: var(--stone-100);
+}
+#my_profile_picture img {
+    height: 27px;
+    border-radius: 50%;
+}
+
 aside{
     background-color: var(--stone-950, black);
     grid-area: aside;
@@ -141,8 +162,60 @@ aside ul{
     flex-direction: column;
     gap: 12px;
 }
+.hero > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(var(--header-height) - 45px);
+}
+.hero > div > div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+.hero > div > div:first-child img{
+    aspect-ratio: 1;
+    height: 34px;
+    border-radius: 50%;
+}
+.hero > div > div:first-child div{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5px;
+}
+.hero > div > div:first-child p:first-child{
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+}
+.hero > div > div:first-child p:last-child{
+    font-size: 15px;
+    font-weight: var(--font-weight-medium);
+
+}
+.hero > div > div:last-child{
+    display: flex;
+    gap: 15px;
+    margin-right: 20px;
+}
+.hero > div > div:last-child button{
+    width: 60px;
+    font-size: 12px;
+    border-radius: 16px;
+    border: 1.85px solid transparent;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: var(--stone-600);
+    color: var(--stone-50);
+    font-weight: var(--font-weight-medium);
+}
+.hero > div > div:last-child button:hover{
+    border: 1.85px solid var(--stone-600);
+    color: var(--stone-600);
+    background-color: transparent;
+}
 main{
-    background-color: blanchedalmond;
     grid-area: main;
     height: calc(100vh - var(--header-height));
+    background-color: var(--stone-200);
 }
