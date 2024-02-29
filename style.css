@@ -1,6 +1,6 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: var(--font-family);
     color: var(--stone-600);
@@ -12,7 +12,7 @@ a{
     text-decoration: none;
 }
 :root{
-    --header-height: 105px;
+    /* --header-height: 105px; */
 /* Roboto Font Family */
     --font-family: "Roboto", sans-serif;
     --font-weight-thin: 100;
@@ -34,22 +34,26 @@ a{
     --stone-900: #1c1917;
     --stone-950: #0c0a09;
 }
-
-.container{
+body{
     display: grid;
     grid-template-columns: 1fr 5fr;
+    /* grid-auto-rows: ; */
     width: 100%;
     grid-template-areas: 
-    "aside header"
-    "aside main";
+    "aside container"; 
+}
+.container{
+    display: grid;
+    grid-area: container;
+    grid-template-rows: minmax(105px,);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main";
 }
 header{
     background-color: var(--stone-50, white);
-    grid-area:header;
-    height: var(--header-height);
-    border-bottom: 2px solid;
-    border-image: linear-gradient(to top, var(--stone-50), var(--stone-100)) 1;
-
+    grid-area: header;
 }
 nav{
     display: grid;
@@ -125,13 +129,13 @@ nav input[type = "search"]:focus{
     border-radius: 50%;
 }
 
+/* grid-template-rows: 20px auto auto; */
 aside{
     background-color: var(--stone-950, black);
     grid-area: aside;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    /* grid-template-rows: 20px auto auto; */
     gap: 40px;
     align-content: flex-start;
     padding-left: 13px;
@@ -166,10 +170,11 @@ aside ul{
     gap: 12px;
 }
 .hero > div{
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: calc(var(--header-height) - 45px);
 }
 .hero > div > div:first-child{
     display: flex;
@@ -219,7 +224,6 @@ aside ul{
 }
 main{
     grid-area: main;
-    height: calc(100vh - var(--header-height));
     background-color: var(--stone-100);
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -241,21 +245,17 @@ main div h2{
     gap: 15px;
 
 }
-.gridtwo > div > div{
-
-}
 .gridone{
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: repeat(3, 1fr);
-    /* width: repeat(3, calc((1/3 * 90%))); */
     gap: 15px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .card{
-    height: 140px;
+    min-height: 142.7px;
     background-color: var(--stone-50);
     border-radius: 7px;
     border-left: #57534e 7px solid;
@@ -281,4 +281,21 @@ main div h2{
 .card figure img{
     height: 20px;
     margin-left: 5px;
+}
+.card2{
+    background-color: var(--stone-50);
+    border-radius: 7px;
+    box-sizing: content-box;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.card2 h4{
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.card2 p{
+    font-size: 12px;
 }
