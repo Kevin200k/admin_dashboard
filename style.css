@@ -226,11 +226,12 @@ main{
     grid-area: main;
     background-color: var(--stone-100);
     display: grid;
+    gap: 10px;
     grid-template-columns: 3fr 1fr;
 }
 main div h2{
     margin-left: 14px;
-    font-size: 17px;
+    font-size: 16px;
     padding-top: 30px;
     padding-bottom: 12px;
     color: var(--stone-700);
@@ -255,7 +256,7 @@ main div h2{
 }
 
 .card{
-    min-height: 142.7px;
+    min-height: 147px;
     background-color: var(--stone-50);
     border-radius: 7px;
     border-left: #57534e 7px solid;
@@ -265,6 +266,7 @@ main div h2{
     padding-top: 15px;
     margin-bottom: 15px;
     box-shadow: 2px 2px 10px var(--stone-300);
+    grid-area: card;
 }
 .card h3{
     font-size: 16px;
@@ -289,13 +291,41 @@ main div h2{
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px
+    gap: 15px;
+    margin-right: 20px;
+    box-shadow: 2px 2px 10px var(--stone-300);
+    grid-area: card2;
+
 }
 
 .card2 h4{
-    font-size: 14px;
-    margin-bottom: 3px;
+    font-size: 13px;
+    margin-bottom: 4cpx;
 }
 .card2 p{
     font-size: 12px;
+}
+.card3{
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px var(--stone-300);
+    padding: 15px 20px;
+    margin-right: 20px;
+    grid-row: card3;
+}
+.card3 > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+
+}
+.card3 > div p:first-child{
+    margin-bottom: 2px;
+    font-weight: var(--font-weight-medium);
+    color: var(--stone-800);
+}
+.card3 img{
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px var(--stone-300);
 }
